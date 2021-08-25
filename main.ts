@@ -4,6 +4,9 @@ modified from chengengyue
 */
 
 
+/**对代码进行分析，有四个5个名字空间：传感器，显示，输入，马达，主类 */
+
+
 //% color="#228B22" weight=25 icon="\uf0b2"
 namespace CrocoKit_Sensor {
 

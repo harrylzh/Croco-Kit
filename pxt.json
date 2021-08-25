@@ -1,11 +1,13 @@
 {
     "name": "Croco-Kit",
     "version": "2.0.1",
-    "description": "Extension for YahBoom YB_Croco_Kit V2.0.1",
+    "description": "扩展基于亚博智能 YB_Croco_Kit V2.0.1，lzh 修改",
+    "license": "MIT",
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "LEDBit": "github:harrylzh/LED-Bit"
+        "LEDBit": "file:../LED-Bit",
+        "microphone": "*"
     },
     "files": [
         "README.md",
@@ -16,6 +18,5 @@
     "testFiles": [
         "test.ts"
     ],
-    "public": false,
-    "license": "MIT"
+    "public": false
 }
