@@ -1,5 +1,5 @@
 {
-
+// vscode://vscode.github-authentication/did-authenticate?windowid=1&code=d9b99a30ff24a6454e4b&state=0f77043a-9c80-4e8f-bc60-615c64cce649
     // 测试按钮驱动
     if (CrocoKit_Input.Button(DigitalPin.P1, CrocoKit_Input.enButton.Press)) {
         basic.showIcon(IconNames.Heart)
