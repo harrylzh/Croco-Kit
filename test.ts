@@ -1,4 +1,31 @@
-// tests go here; this will not be compiled when this package is used as a library
-if (CrocoKit_Input.Button(DigitalPin.P1, CrocoKit_Input.enButton.Press)) {
-    basic.showIcon(IconNames.Heart)
+{
+
+    // 测试按钮驱动
+    if (CrocoKit_Input.Button(DigitalPin.P1, CrocoKit_Input.enButton.Press)) {
+        basic.showIcon(IconNames.Heart)
+    }
+
+    //高电位测试
+    pins.setPull(DigitalPin.P1, PinPullMode.PullUp)//初始设置高电位,当按钮按下是通电为低电位
+    // pins.analogReadPin(AnalogPin.P1)//是否可以模拟读?
+    if (pins.digitalReadPin(DigitalPin.P1) == 0) {
+        soundExpression.hello.play()
+    }
+
+
+    //低电位测试
+    pins.setPull(DigitalPin.P1, PinPullMode.PullDown)//初始设置低电位,当按钮按下是通电为低电位
+    // pins.analogReadPin(AnalogPin.P1)//是否可以模拟读?
+    if (pins.digitalReadPin(DigitalPin.P1) == 0) {//所以一直都是低电位，就一直响
+        soundExpression.hello.play()
+    }
+
+    //零电位测试
+    pins.setPull(DigitalPin.P1, PinPullMode.PullNone)//初始设置0电位,当按钮按下是通电为低电位
+    // pins.analogReadPin(AnalogPin.P1)//是否可以模拟读?
+    if (pins.digitalReadPin(DigitalPin.P1) == 0) {//还是按下去的时候响哦
+        soundExpression.hello.play()
+    }
+
+
 }

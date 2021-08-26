@@ -422,8 +422,8 @@ namespace CrocoKit_Input {
     //% color="#808080"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=5
     export function Button(pin: DigitalPin, value: enButton): boolean {
-        pins.setPull(pin, PinPullMode.PullUp);
-        return pins.digitalReadPin(pin) == value;
+        pins.setPull(pin, PinPullMode.PullUp);//设置上拉电阻，将引脚电压设为高，按钮按下的时候电压为0
+        return pins.digitalReadPin(pin) == value;//对引脚电位进行数字判断，0-1
     }
 
 }
